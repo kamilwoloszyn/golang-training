@@ -63,20 +63,26 @@ func IterOverMatrix() uint32 {
 func IterOverMatrixRow() uint32 {
 	var ctr uint32
 	for row := 0; row < rows; row++ {
-		if matrix[row][0] == 0xff {
-			ctr++
+		for column := 0; column < cols; column++ {
+			if matrix[row][column] == 0xff {
+				ctr++
+			}
 		}
 	}
+
 	return ctr
 }
 
 func IterOverMatrixColumn() uint32 {
 	var ctr uint32
-	for column := 0; column < cols; column++ {
-		if matrix[0][column] == 0xff {
-			ctr++
+	for row := 0; row < rows; row++ {
+		for column := 0; column < cols; column++ {
+			if matrix[row][column] == 0xff {
+				ctr++
+			}
 		}
 	}
+
 	return ctr
 }
 

@@ -3,16 +3,17 @@
 package structures
 
 import (
-	"fmt"
 	"testing"
 )
+
+var dummy uint32
 
 func BenchmarkIterOverLinkedList(b *testing.B) {
 	var result uint32
 	for i := 0; i < b.N; i++ {
 		result = IterOverLinkedList()
 	}
-	fmt.Printf("\nComplete. Result: %d\n", result)
+	dummy = result
 }
 
 func BenchmarkIterOverMatrix(b *testing.B) {
@@ -20,7 +21,7 @@ func BenchmarkIterOverMatrix(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		result = IterOverMatrix()
 	}
-	fmt.Printf("\nComplete. Result: %d\n", result)
+	dummy = result
 }
 
 func BenchmarkIterOverMatrixRow(b *testing.B) {
@@ -28,7 +29,7 @@ func BenchmarkIterOverMatrixRow(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		result = IterOverMatrixRow()
 	}
-	fmt.Printf("\nComplete. Result: %d\n", result)
+	dummy = result
 }
 
 func BenchmarkIterOverMatrixColumn(b *testing.B) {
@@ -36,5 +37,5 @@ func BenchmarkIterOverMatrixColumn(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		result = IterOverMatrixColumn()
 	}
-	fmt.Printf("\nComplete. Result: %d\n", result)
+	dummy = result
 }
