@@ -22,20 +22,19 @@ func init() {
 	var lastItemPointer *B
 	for row := 0; row < rows; row++ {
 		for column := 0; column < cols; column++ {
-			matrix[row][column] = 0xFF
+
 			if *&myStruct != nil {
-				lastItemPointer.next = &B{
-					value: 0xFF,
-					next:  nil,
-				}
+				lastItemPointer.next = &B{}
 				lastItemPointer = lastItemPointer.next
 
 			} else {
-				myStruct = &B{
-					value: 0xFF,
-					next:  nil,
-				}
+				myStruct = &B{}
 				lastItemPointer = *&myStruct
+			}
+
+			if row%4 == 0 {
+				matrix[row][column] = 0xFF
+				lastItemPointer.value = 0xFF
 			}
 
 		}
@@ -51,19 +50,17 @@ func IterOverMatrix() uint32 {
 
 	for row := 0; row < rows; row++ {
 		for col := 0; col < cols; col++ {
-			if matrix[row][col] == 0xFF {
-				ctr++
-			}
+			ctr++
 		}
 	}
 
 	return ctr
 }
 
-func IterOverMatrixRow() uint32 {
+func IterOverMatrixColumn() uint32 {
 	var ctr uint32
-	for row := 0; row < rows; row++ {
-		for column := 0; column < cols; column++ {
+	for column := 0; column < cols; column++ {
+		for row := 0; row < rows; row++ {
 			if matrix[row][column] == 0xff {
 				ctr++
 			}
@@ -73,7 +70,7 @@ func IterOverMatrixRow() uint32 {
 	return ctr
 }
 
-func IterOverMatrixColumn() uint32 {
+func IterOverMatrixRow() uint32 {
 	var ctr uint32
 	for row := 0; row < rows; row++ {
 		for column := 0; column < cols; column++ {
