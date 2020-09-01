@@ -15,42 +15,10 @@ const (
 )
 
 var matrix [rows][cols]byte
-
-//IterOverLinkedList (list *B) uint32
-// It takes pointer to the list and return counter<uint32>
-func IterOverLinkedList(list *B) uint32 {
-	var ctr uint32
-	var helperPointer *B
-	if list != nil {
-		ctr++
-		helperPointer = list.next
-		for helperPointer != nil {
-			helperPointer = helperPointer.next
-			ctr++
-		}
-	}
-	return ctr
-}
-
-// IterOverMatrix () uint32
-// It takes matrix, number of rows and number of cols
-func IterOverMatrix() uint32 {
-	var ctr uint32
-
-	for row := 0; row < rows; row++ {
-		for col := 0; col < cols; col++ {
-			if matrix[row][col] == 0xFF {
-				ctr++
-			}
-		}
-	}
-
-	return ctr
-}
+var myStruct *B
 
 func init() {
 
-	var myStruct *B
 	var lastItemPointer *B
 	for row := 0; row < rows; row++ {
 		for column := 0; column < cols; column++ {
@@ -72,6 +40,58 @@ func init() {
 
 		}
 	}
-	fmt.Printf("LinkedList elemnts: %d and Matrix elements: %d", IterOverLinkedList(*&myStruct), IterOverMatrix())
+	fmt.Printf("LinkedList elemnts: %d and Matrix elements: %d", IterOverLinkedList(), IterOverMatrix())
 
+}
+
+// IterOverMatrix () uint32
+// It takes matrix, number of rows and number of cols
+func IterOverMatrix() uint32 {
+	var ctr uint32
+
+	for row := 0; row < rows; row++ {
+		for col := 0; col < cols; col++ {
+			if matrix[row][col] == 0xFF {
+				ctr++
+			}
+		}
+	}
+
+	return ctr
+}
+
+func IterOverMatrixRow() uint32 {
+	var ctr uint32
+	for row := 0; row < rows; row++ {
+		if matrix[row][0] == 0xff {
+			ctr++
+		}
+	}
+	return ctr
+}
+
+func IterOverMatrixColumn() uint32 {
+	var ctr uint32
+	for column := 0; column < cols; column++ {
+		if matrix[0][column] == 0xff {
+			ctr++
+		}
+	}
+	return ctr
+}
+
+//IterOverLinkedList (list *B) uint32
+// It takes pointer to the list and return counter<uint32>
+func IterOverLinkedList() uint32 {
+	var ctr uint32
+	var helperPointer *B
+	if myStruct != nil {
+		ctr++
+		helperPointer = myStruct.next
+		for helperPointer != nil {
+			helperPointer = helperPointer.next
+			ctr++
+		}
+	}
+	return ctr
 }
