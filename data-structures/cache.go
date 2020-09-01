@@ -48,7 +48,7 @@ func IterOverMatrix() uint32 {
 	return ctr
 }
 
-func main() {
+func init() {
 
 	var myStruct *B
 	var lastItemPointer *B
