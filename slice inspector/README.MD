@@ -1,0 +1,1 @@
+That takes a slice and gives extended details about a slice
