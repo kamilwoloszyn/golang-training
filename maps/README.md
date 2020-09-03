@@ -1,0 +1,1 @@
+You can see how maps is used in real example
