@@ -1,0 +1,1 @@
+This shows how string looks like from computer perspective.
