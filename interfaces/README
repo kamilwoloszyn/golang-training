@@ -1,0 +1,1 @@
+This example shows how to make interfaces, and in which case is it used.
