@@ -1,4 +1,4 @@
-package main
+package methods
 
 import (
 	"fmt"
@@ -30,7 +30,7 @@ func (u User) ShowPassword() {
 	fmt.Printf("Password is: %s", u.password)
 }
 
-func main() {
+func run() {
 
 	kamil := User{
 		"kamilos@example.com",

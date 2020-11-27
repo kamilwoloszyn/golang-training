@@ -1,4 +1,4 @@
-package main
+package polymorphism
 
 import "fmt"
 
@@ -36,21 +36,4 @@ func (u *User) changeUserNameByPointerSemantics(name string) {
 
 func (u User) displayName() {
 	fmt.Println(u.name)
-}
-
-//go:noinline
-func main() {
-	var kamil User
-	var kamila *User
-	kamil.CreateUserByValueSemantics("Kamil", "kamil@example.com")
-	kamila.CreateUserByPointerSemantics("Kamila", "kamila@example.com")
-
-	f1 := kamil.changeUserNameByValueSemantics
-	fn2 := kamil.changeUserNameByPointerSemantics
-
-	fn2("Marysia")
-	kamil.displayName()
-
-	f1("Zosia")
-	kamil.displayName()
 }

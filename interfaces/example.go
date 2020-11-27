@@ -1,4 +1,4 @@
-package main
+package interfaces
 
 import (
 	"bytes"
@@ -102,7 +102,7 @@ func (j *JSON) GetAddr() string {
 	return fmt.Sprint("%s", &j)
 }
 
-func main() {
+func run() {
 	//Do not modify these content
 	sampleJSONText := "{name:Kamil}"      //<= this (json simplified)
 	sampleXMLText := "<name>Kamil</name>" // <= and this

@@ -1,8 +1,8 @@
-package main
+package mutation
 
 import "fmt"
 
-func main() {
+func run() {
 
 	var testSlice []string
 	var lastCapacity = cap(testSlice)

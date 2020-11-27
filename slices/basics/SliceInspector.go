@@ -1,4 +1,4 @@
-package main
+package basics
 
 import "fmt"
 
@@ -9,7 +9,8 @@ func InspectSlice(s []string) {
 		fmt.Printf("Element [%d]: %p with element addr: %p \n", i, &s[i], &v)
 	}
 }
-func main() {
+
+func run() {
 
 	sampleSlice := make([]string, 10, 20)
 	sampleSlice[0] = "somestring1"

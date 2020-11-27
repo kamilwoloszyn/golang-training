@@ -1,4 +1,4 @@
-package main
+package maps
 
 import "fmt"
 
@@ -10,7 +10,7 @@ type Person struct {
 	gender    string
 }
 
-func main() {
+func run() {
 	people := map[string]Person{
 		"Chris": {
 			30,

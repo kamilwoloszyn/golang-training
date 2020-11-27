@@ -1,8 +1,8 @@
-package main
+package pointers
 
 import "fmt"
 
-func main() {
+func run() {
 	baseSlice := make([]int, 6)
 	for i := range baseSlice {
 		baseSlice[i] = i
