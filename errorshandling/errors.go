@@ -41,6 +41,8 @@ func Run() {
 		default:
 			fmt.Printf("Default Error")
 		}
+		fmt.Printf("\nStack trace:\n")
+		fmt.Printf("%+v", e)
 	}
 
 }
