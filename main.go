@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/assertions"
+	"github.com/kamilwoloszyn/golang-training/context"
 )
 
 func main() {
-	assertions.Run()
-
+	//assertions.Run()
+	//integrity.Run()
+	context.Run()
 }
