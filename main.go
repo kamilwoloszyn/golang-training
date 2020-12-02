@@ -1,12 +1,15 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/errorshandling"
+	"github.com/kamilwoloszyn/golang-training/atomicfunctions"
 )
 
 func main() {
 	//assertions.Run()
 	//integrity.Run()
 	//context.Run()
-	errorshandling.Run()
+	//errorshandling.Run()
+	//concurrency.Run()
+	//dataraces.Run()
+	atomicfunctions.Run()
 }

@@ -32,6 +32,7 @@ func thirdCall() error {
 	return &AppErr{99}
 }
 
+// Run () Run this example
 func Run() {
 
 	if e := firstCall(1); e != nil {
