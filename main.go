@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/atomicfunctions"
+	"github.com/kamilwoloszyn/golang-training/mutexes"
 )
 
 func main() {
@@ -11,5 +11,6 @@ func main() {
 	//errorshandling.Run()
 	//concurrency.Run()
 	//dataraces.Run()
-	atomicfunctions.Run()
+	//atomicfunctions.Run()
+	mutexes.Run()
 }
