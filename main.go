@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/mutexes"
+	"github.com/kamilwoloszyn/golang-training/channels/buffered"
 )
 
 func main() {
@@ -12,5 +12,8 @@ func main() {
 	//concurrency.Run()
 	//dataraces.Run()
 	//atomicfunctions.Run()
-	mutexes.Run()
+	//mutexes.Run()
+	//unbuffered.Run()
+	buffered.Run()
+
 }
