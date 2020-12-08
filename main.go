@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/channels/buffered"
+	"github.com/kamilwoloszyn/golang-training/contextlib/withduration"
 )
 
 func main() {
@@ -14,6 +14,8 @@ func main() {
 	//atomicfunctions.Run()
 	//mutexes.Run()
 	//unbuffered.Run()
-	buffered.Run()
-
+	//buffered.Run()
+	//withcancel.Run()
+	//withdeadline.Run()
+	withduration.Run()
 }
