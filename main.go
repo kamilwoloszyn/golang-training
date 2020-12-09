@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kamilwoloszyn/golang-training/contextlib/withduration"
+	"github.com/kamilwoloszyn/golang-training/tasks"
 )
 
 func main() {
@@ -17,5 +17,6 @@ func main() {
 	//buffered.Run()
 	//withcancel.Run()
 	//withdeadline.Run()
-	withduration.Run()
+	//withduration.Run()
+	tasks.Run()
 }
