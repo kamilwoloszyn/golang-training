@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/kamilwoloszyn/golang-training/tasks"
-)
+import "github.com/kamilwoloszyn/golang-training/testing/example1"
 
 func main() {
 	//assertions.Run()
@@ -18,5 +16,6 @@ func main() {
 	//withcancel.Run()
 	//withdeadline.Run()
 	//withduration.Run()
-	tasks.Run()
+	//tasks.Run()
+	example1.Run()
 }
